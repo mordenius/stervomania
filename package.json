@@ -42,6 +42,8 @@
   "dependencies": {
     "history": "^4.6.3",
     "react-history": "^0.18.2",
-    "react-swipeable": "^3.9.2"
+    "react-swipeable": "^3.9.2",
+    "react-swipeable-routes": "^0.1.2",
+    "wheel-swipe": "^0.2.3"
   }
 }
