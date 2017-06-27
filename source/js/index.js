@@ -1,3 +1,5 @@
+import "./../style/stylesheets/main.sass";
+
 import LoaderController from "bbt-loader"; //eslint-disable-line
 import LoaderList from "@/loaderList"; //eslint-disable-line
 

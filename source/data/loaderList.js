@@ -14,7 +14,7 @@ const LoaderList = [
                 isLoaded: false
             },
             {
-                name: "sview",
+                name: "view",
                 type: "class",
                 controller: ViewController,
                 params: ['history'],

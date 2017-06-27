@@ -1,0 +1,65 @@
+div.five
+  width: 100%
+  height: 100%
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+  text-align: start
+
+  .fiveLeft, .fiveRight
+    width: 50%
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+
+  .fiveLeft
+    width: 40%
+    img
+      width: 100%
+      margin: auto
+
+  .fiveRight
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    line-height: 20px
+    h1
+      font-weight: bold
+      font-size: 25px
+      padding: 10px 0
+    p
+      padding: 15px 0
+
+    ul
+      font-family: sans-serif
+      list-style: disc
+      font-weight: bold
+      padding-left: 30px
+
+@media screen and (max-width: 1050px)
+  div.five div.fiveRight
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    line-height: 15px
+    h1
+      font-weight: bold
+      font-size: 15px
+      padding: 5px 0
+      color: black
+    p
+      font-size: 15px
+      padding: 7px 0
+
+    ul
+      font-family: sans-serif
+      list-style: disc
+      font-weight: bold
+      padding-left: 20px
+      font-size: 15px
+
+
