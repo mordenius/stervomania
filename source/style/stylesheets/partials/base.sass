@@ -4,44 +4,82 @@
   left: 0
   height: 100%
   width: 100%
+  background: #2b2b2b
 
-  .wrapper
+  section,
+  [data-reactroot]
     display: flex
     justify-content: center
     align-items: center
-    max-width: 1920px
+    width: inherit
     height: inherit
-    > *
-      margin: auto
-      h1
-        font-family: "Helvetica Neue", Helvetica, sans-serif
-      p
-        font-family: sans-serif
+    position: absolute
+    top: 0
 
-  form
-    width: 300px
-    height: 150px
-    background: black
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-    align-items: center
-    input
-      background: white
-      width: 250px
-      height: 40px
-      font-weight: bold
-      text-align: center
-      border-radius: 5px
-    input:last-child
-      background: yellow
-      border-radius: 10px
-    input.checkbox
-      width: 15px
-      height: 15px
-      align-self: start
-      margin: 0 5px
-      color: white
-    label
-      color: white
-      text-decoration: underline
+    > div
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      background-size: auto 100%
+      width: 100%
+      height: 100%
+      display: flex
+      flex-wrap: wrap
+      flex-direction: column
+      align-items: center
+      padding: 20px
+      max-width: 1260px
+      @extend .shadow
+      background-color: white
+
+  [data-reactroot]
+    z-index: 100
+@media screen and (orientation : portrait)
+  #container section [data-reactroot] > div
+    background-size: auto 100%
+
+form
+  width: 300px
+  padding: 20px
+  background: rgba(0, 0, 0, .7)
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  > div
+    margin: 15px
+  input
+    background: white
+    width: 250px
+    height: 40px
+    font-weight: bold
+    text-align: center
+  input[type="submit"]
+    background: yellow
+    padding: 5px 15px
+    &:hover
+      background: #fff9a4
+  input.checkbox
+    width: 15px
+    height: 15px
+    align-self: start
+    margin: 0 5px
+    color: white
+  label
+    color: white
+    text-decoration: underline
+
+.example-appear
+  opacity: 0.01
+  -webkit-filter: grayscale(100%)
+  filter: grayscale(100%)
+  &.example-appear-active
+    -webkit-filter: grayscale(0%)
+    filter: grayscale(0%)
+    opacity: 1
+    transition: opacity 500ms ease-in
+
+.example-leave
+  opacity: 1
+  &.example-leave-active
+    opacity: 0.01
+    transition: opacity 300ms ease-in

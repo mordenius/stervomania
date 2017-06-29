@@ -1,43 +1,31 @@
-div.four
-  width: 100%
-  height: 100%
-  display: flex
-  flex-wrap: wrap
-  flex-direction: column
-  justify-content: space-around
-  align-items: center
-  text-align: start
-  color: white
-  font-size: 20px
-  font-weight: bold
-  line-height: 25px
+.four
+  background-image: url(./../../img/fourUp.jpg)
 
-  div.fourUp, div.fourDown
+  .fourUp
+    @extend .white-block
+    @extend .shadow
+    margin: 30px 0 0 100px
+    align-self: start
+    p
+      align-self: start
+      text-align: left
+      &:last-child
+        @extend .shadow-text
+        font-size: 30px
+
+
+.because
+  justify-content: center
+  background-image: url(./../../img/fourDown.jpg)
+  .fourDown
     display: flex
     flex-wrap: wrap
-    flex-direction: row
-    align-items: center
-    width: 100%
-    background-position: 50% 50%
-    background-repeat: no-repeat
-    background-size: cover
-
-
-  div.fourUp
-    background-image: url(./../../img/fourUp.jpg)
-    width: 100%
-    height: 60%
-    flex-direction: column
-    align-items: start
-    p
-      margin: 30px 0 0 100px
-
-  div.fourDown
-    justify-content: space-around
-    background-image: url(./../../img/fourDown.jpg)
-    height: 40%
-
-@media screen and (max-width: 1640px)
-  div.four
-    div.fourUp, div.fourDown
-      background-size: auto
+    > div
+      display: flex
+      flex-direction: column
+      justify-content: center
+      text-align: start
+      p
+        @extend .shadow-text
+        color: white
+        font-size: 25px

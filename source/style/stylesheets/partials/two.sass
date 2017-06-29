@@ -1,21 +1,5 @@
 div.two
   background-image: url(./../../img/two.jpg)
-  background-position: 50% 50%
-  background-repeat: no-repeat
-  background-size: auto
-  width: 100%
-  height: 100%
-  display: flex
-  flex-wrap: wrap
-  flex-direction: column
-  justify-content: space-around
-  align-items: center
-  p, h1
-    color: white
-    //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-    padding: 10px 0
-    text-align: start
-    font-size: 20px
 
   .twoUp, .twoDown
     width: 100%
@@ -27,39 +11,64 @@ div.two
     justify-content: space-around
 
   .twoUp
-    div.twoUp-right
+    iframe
+      @extend .shadow
+      @extend .white-block
+
+    .twoUp-right
       display: flex
       flex-wrap: wrap
       flex-direction: column
       justify-content: space-around
+      @extend .yellow-block
+      @extend .shadow
+      text-align: start
+
 
   .twoDown
-    div
-      flex-direction: column
-    p
-      text-transform: uppercase
-      text-align: center
-    div.day
-      width: 200px
-      height: 200px
-      border-radius: 200px
-      border: 1px solid black
-      background: white
+    .wrapper
+      width: auto
+      justify-content: center
+      flex-direction: row
+      flex-wrap: wrap
+      display: flex
+      @extend .shadow
+      @extend .white-block
+      div
+        flex-direction: column
+        &:nth-child(1) .day
+          background-image: url(./../../img/1.jpg)
+        &:nth-child(2) .day
+          background-image: url(./../../img/2.jpg)
+        &:nth-child(3) .day
+          background-image: url(./../../img/3.jpg)
+      p
+        text-transform: uppercase
+        text-align: center
+        @extend .yellow-block
+        margin: 0 15px -25px
+        text-align: center
+        z-index: 10
+        position: relative
+      .day
+        margin: 0 5px
+        width: 200px
+        height: 200px
+        border-radius: 200px
+        border: 10px solid black
+        background-size: auto 100%
 
 
 @media screen and (max-width: 700px)
-
   iframe
     width: 300px
     height: 200px
-  div.two p, h1
-    color: white
-    //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  .two p, h1
     padding: 5px 0
     text-align: start
     font-size: 15px
 
-  div.two .twoDown div.day
+  .two .twoDown .day
      width: 150px
      height: 150px
      border-radius: 150px
