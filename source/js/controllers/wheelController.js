@@ -18,6 +18,8 @@ class WheelController {
 			} else if ("onmousewheel" in document) {
 				// устаревший вариант события
 				elem.addEventListener("mousewheel", this.onWheel.bind(this));
+			} else if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+					elem.addEventListener('scroll', this.onWheel.bind(this));
 			} else {
 				// Firefox < 17
 				elem.addEventListener("MozMousePixelScroll", this.onWheel.bind(this));
